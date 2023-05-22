@@ -1,0 +1,26 @@
+rota 1 https://sistemaatendimento.onrender.com/relatorios
+GET
+retorna os relatórios exibidos da aplicação
+{'data_inicio': '2023-05-19',                                        'data_fim': '2023-05-20',                                               'tipo_rel': '0'}
+tipo_rel = 0 - relatório do quantitativo de senhas
+tipo_rel = 1 - Relatório detalhado
+tipo_rel = 2 - Relatório do tempo médio
+header = {'Accept': 'application/json'}
+
+rota 2 https://sistemaatendimento.onrender.com/gerar_senha
+POST
+gera uma nova senha do toten
+data = {'tipo_senha': '0'}
+tipo_senha = 0 - gera senha SP
+tipo_senha = 1 - gera senha SG
+tipo_senha = 2 - gera senha SE
+header = {'Accept': 'application/json'}
+
+rota 3 https://sistemaatendimento.onrender.com/ultimas_senhas
+GET
+retorna as 5 últimas senhas criadas
+
+rota 4 https://sistemaatendimento.onrender.com/chamar_senha
+GET
+retorna a próxima senha a ser chamada
+
