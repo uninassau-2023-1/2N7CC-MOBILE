@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "appTotem",
+    "slug": "appTotem",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "96e1291f-a1c8-46d0-8f25-87f5dbe2ebf8"
+      }
+    }
+  }
+}
