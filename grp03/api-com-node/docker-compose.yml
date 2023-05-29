@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    network_mode: bridge
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: matheus123
+      MYSQL_DATABASE: api_node
+      MYSQL_USER: thiagotw10
+      MYSQL_PASSWORD: matheus123
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    network_mode: bridge
+    container_name: pma
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - 8081:80
+  web:
+    build: .
+    network_mode: bridge
+    container_name: web
+    links:
+      - db
+    ports:
+      - "4000:4000"
+volumes:
+  dbdata:

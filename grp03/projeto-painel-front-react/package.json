@@ -1,0 +1,34 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next dev\" \"node server.js\"",
+    "dev-x": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "babel": "^6.23.0",
+    "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
+    "eslint": "8.35.0",
+    "eslint-config-next": "13.2.3",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "ioredis": "^5.3.2",
+    "next": "13.2.3",
+    "node-cron": "^3.0.2",
+    "react": "18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+.menu{
+    background-color: white;
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-bottom: 1px solid #16c2f4;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.conteudos{
+    width: 100%;
+    height: 93vh;
+    padding: 20px;
+    font-family: 'Benne', serif;
+}
+
+.menuVertical{
+    background-color: #16c2f4;
+    width: 5%;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+}
+
+.iconeAndroid{
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.iconeAndroid:hover{
+    color: rgba(0, 0, 0, 0.596);
+}
+
+.iconeTela{
+    font-size: 30px;
+    color: black;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+
+.iconeTela:hover{
+    color: rgba(0, 0, 0, 0.596);
+}
+
+.listaMenus{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.cards{
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    margin: 20px 20px;
+    background-color: aquamarine;
+    width: 23%;
+    min-height: 24vh;
+    padding: 10px;
+    box-shadow: 3px 5px 5px -3px rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+
+.iconeTelaCard{
+    font-size: 80px;
+}
+
+.botao{
+    border: none;
+    padding: 10px 50px;
+    background-color: #16c2f4;
+    border-radius: 5px;
+}
+
+.botaoF{
+    border: none;
+    padding: 10px 50px;
+    background-color: #f4164d;
+    border-radius: 5px;
+}
+.botaoF:hover{
+    border: none;
+    padding: 10px 50px;
+    background-color: #f4164d8f;
+    border-radius: 5px;
+}
+
+.botaoVermelho{
+    border: none;
+    padding: 10px 50px;
+    background-color: #f4164d;
+    border-radius: 5px;
+}
+
+.botao:hover{
+    background-color: #16c0f4b6;
+}
+
+.botaoFechar{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(201, 12, 12);
+}
+
+.botaoFechar:hover{
+    color: rgba(255, 0, 0, 0.685);
+}
+
+
+
+.painelSenhaContainer{
+    display: flex;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.painelSenhaCards{
+    width: 35%;
+    height: 77vh;
+    overflow: overlay;
+    padding: 0 30px;
+}
+
+.painellSenhaCards{
+    width: 50%;
+    height: 80vh;
+    overflow: overlay;
+    padding: 30px 50px;
+}
+
+.painelSenhaDetalhes{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painelSenhaCard{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    box-shadow: 3px 5px 5px -3px rgba(0,0,0,0.75);
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.painelSenhaCardSelect{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    box-shadow: 3px 5px 5px -3px rgba(0,0,0,0.75);
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: rgba(134, 197, 18, 0.178);
+}
+
+.painelSenhaCard:hover{
+    background-color: rgba(134, 197, 18, 0.178);
+}
+
+.painelSenhaListaBotoes{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    min-height: 30vh;
+    justify-content: space-between;
+}
+
+.painelSenhaTexto{
+    padding: 20px;
+    margin: 20px;
+}
+
+.painelSenhas{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes painelSenhaCard {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation-name: painelSenhaCard;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    box-shadow: 3px 5px 5px -3px rgba(0,0,0,0.75);
+    margin: 10px 0;
+    cursor: pointer;
+  }
+
+
+
+  .loader {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .inner {
+    animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform: translateZ(0);
+    background-color: #00ff00;
+    width: 4%;
+    height: 8%;
+    border-radius: 50%;
+    opacity: 0.6;
+    position: absolute;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
