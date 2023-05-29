@@ -14,6 +14,7 @@
     "@types/react": "~18.0.27",
     "axios": "^1.4.0",
     "expo": "^48.0.17",
+    "expo-linear-gradient": "~12.1.2",
     "expo-splash-screen": "~0.18.2",
     "expo-status-bar": "~1.4.4",
     "phosphor-react-native": "^1.1.2",
