@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Painel
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-title>{{ item.senha }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Guichê: {{ item.guiche }} 
+      <br>
+      Hora: {{ item.hora }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

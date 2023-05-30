@@ -1,0 +1,7 @@
+{
+  "name": "TotenMedico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
