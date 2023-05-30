@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <title>Controle</title>
+</head>
+<body style="background-image: url(./img/background.svg);" class="body1">
+  <div class="grid-template">
+    <div class="sidebar" style="display: flex; flex-direction: column;">
+      <img src="./img/neosaude.svg" alt="">
+      <a class="span-drawer" href="./controle.html"><span class="material-symbols-outlined">home</span> Inicio</a>
+      <a class="span-drawer" href="./relatorio.html"><span class="material-symbols-outlined">lab_profile</span> Relatorios</a>
+      <a class="span-drawer" href="./login.html"><span class="material-symbols-outlined">close</span> Sair</a>
+      
+    </div>
+    <div class="content">
+      <div class="inicio-controle">
+        <div style="display: flex;">
+          <span class="inicio-relatorio"><span class="material-symbols-outlined" style="color: black;">home</span> Inicio</span>
+        </div>
+        <div style="display: flex;">
+          <span class="name-usuario">nome do Usuario <span class="material-symbols-outlined" style="color: black;">account_circle</span></span>
+        </div>
+      </div>
+      <div class="flex-relatorio">
+        <div class="flex-relatorio2">
+          <button style="background-color: #06CBB0;" class="button-base">PRÓXIMA SENHA</button>
+          <button style="background-color: #6792A6;" class="button-base">CHAMAR NOVAMENTE</button>
+          <button style="background-color: #FD486B;" class="button-base">SENHA EXPIRADA</button>
+          <button style="background-color: #7957F6;" class="button-base" id="oi">GERAR RELATÓRIO</button>
+        </div>
+        <div class="senha-baloom" >
+          <a class="senha-atual" href="">SENHA ATUAL:</a>
+          <span class="senha-number"></span>
+          <span class="consultorio-number1">CONSULTORIO: 0<span class="consultorio-number"></span></span>
+        </div>
+        <div class="senha-baloom2">
+          <a class="senha-atual" href="">PROXIMAS SENHAS</a>
+          <span id="proxima-senha-1" class="senha-prioritaria"></span>
+          <span id="proxima-senha-2" class="senha-prioritaria"></span>
+          <span id="proxima-senha-3" class="senha-prioritaria"></span>
+        </div>
+      </div> 
+  </div>
+<script src="./JS/script.js"></script> 
+</body>
+</html>
