@@ -1,0 +1,7 @@
+{
+  "name": "mobile_sca",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

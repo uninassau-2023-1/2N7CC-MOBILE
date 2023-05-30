@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-button slot="end" (click)="fecharModal()">Fechar</ion-button>
+    <ion-title>{{atualizar ? 'Atualizar Senha Geral' : 'Cadastro de Senha Geral'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #f="ngForm" (ngSubmit)="enviando(f)">
+
+    <ion-item>
+      <ion-label position="floating">Data Geral de Senha</ion-label>
+      <ion-input [(ngModel)]="dados.data_geral" name="data_geral" type="date" placeholder="Data de Senha Geral"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Hora do Atendimento</ion-label>
+      <ion-input [(ngModel)]="dados.hora_atendimento" name="hora_atendimento" type="text" placeholder="Hora do Atendimento" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha Atual</ion-label>
+      <ion-input [(ngModel)]="dados.senha_atual" name="senha_atual" type="text" placeholder="Senha Atual" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Senha Anterior</ion-label>
+      <ion-input [(ngModel)]="dados.senha_anterior" name="senha_anterior" type="text" placeholder="Senha Anterior" ></ion-input>
+    </ion-item>
+
+    <ion-button fill="outline" expand="block" type="submit">{{atualizar ? 'Atualizar Senha Geral' : 'Cadastrar Senha Geral'}}</ion-button>
+
+  </form>
+
+</ion-content>
+

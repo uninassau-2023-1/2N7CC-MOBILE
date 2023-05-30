@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Atendimento de Senha Prioritária</ion-title>
+    <ion-button slot="end" color="dark" (click)="novaSenhaPrioritaria()">Nova Senha Prioritária</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu contentId="main-content">
+  <ion-header>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item href="/home">
+        <ion-label>Inicio</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item href="/gerais">
+        <ion-label>Senha Geral</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item href="/prioritarias">
+        <ion-label>Senha Prioritária</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+</div>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="ion-text-center">
+    <ion-item-sliding *ngFor="let p of prioritarias">
+      <ion-item-options side="end">
+        <ion-item-option color="primary" class="first-button" (click)="atualizar(p)">Atualizar</ion-item-option>
+        <ion-item-option color="danger" class="second-button" (click)="remover(p.id)">Delete</ion-item-option>
+      </ion-item-options>
+
+      <ion-item  class="ion-align-items-center">
+        <ion-card color="tertiary">
+          <ion-card-header>
+            <ion-card-title>Data Prioritária: {{ p.data_prioritaria }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="ion-text-large">
+            Hora Atendimento: {{ p.hora_atendimento }}<br>
+            Senha Atual: {{ p.senha_atual }}<br>
+            Senha Anterior: {{ p.senha_anterior }}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="ordenarSenhas()">Ordenar Senhas</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-grid class="custom-grid">
+          <ion-row>
+            <ion-col>
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Data Prioritária</th>
+                    <th>Hora Atendimento</th>
+                    <th>Senha Atual</th>
+                    <th>Senha Anterior</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of prioritarias">
+                    <td>{{ p.data_prioritaria }}</td>
+                    <td>{{ p.hora_atendimento }}</td>
+                    <td>{{ p.senha_atual }}</td>
+                    <td>{{ p.senha_anterior }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+
+
+
+
+
